@@ -23,7 +23,7 @@
     setblock 136 0 141 minecraft:structure_block[mode=load]{name:"calamity:adversity/arena1", mode:"LOAD", posX:0, posY:0, posZ:32, sizeX:1, sizeY:48, sizeZ:13, showboundingbox:1b}
 
     # lobby
-    setblock 133 48 65 minecraft:structure_block[mode=load]{name:"calamity:adversity/lobby", mode:"LOAD", posX:0, posY:1, posZ:0, sizeX:7, sizeY:13, sizeZ:7, showboundingbox:1b}
+    #setblock 133 48 65 minecraft:structure_block[mode=load]{name:"calamity:adversity/lobby", mode:"LOAD", posX:0, posY:1, posZ:0, sizeX:7, sizeY:13, sizeZ:7, showboundingbox:1b}
 
     # sign
     setblock 117 64 75 minecraft:structure_block[mode=load]{name:"calamity:adversity/sign", mode:"LOAD", posX:0, posY:1, posZ:0, sizeX:41, sizeY:11, sizeZ:5, showboundingbox:1b}
@@ -44,7 +44,7 @@
     fill 136 0 137 136 1 142 minecraft:redstone_block replace minecraft:air
 
     # lobby
-    setblock 133 47 65 minecraft:redstone_block
+    #setblock 133 47 65 minecraft:redstone_block
 
     # sign
     setblock 117 63 75 minecraft:redstone_block
@@ -65,7 +65,7 @@
 # Purpose: Erase structure and redstone blocks
 #---------------------------------------------------------------------------------------------------
     # lobby
-    fill 133 48 65 133 47 65 minecraft:air
+    #fill 133 48 65 133 47 65 minecraft:air
     # sign
     fill 117 63 75 117 64 75 minecraft:air
     # data 
@@ -109,8 +109,8 @@ summon minecraft:area_effect_cloud 116 46 165 {CustomName: '{"text":"Generator"}
 summon minecraft:area_effect_cloud 150 25 158 {CustomName: '{"text":"Generator"}', Tags: ["Point", "FacingWest", "TeamRed", "Effect", "Regeneration"], CustomNameVisible: 0b, Duration: 2147483647, Rotation: [90.0f, -0.0f]}
 summon minecraft:area_effect_cloud 151 40 170 {CustomName: '{"text":"Generator"}', Tags: ["Point", "FacingWest", "TeamRed", "Effect", "Haste"], CustomNameVisible: 0b, Duration: 2147483647, Rotation: [90.0f, -0.0f]}
 # This objectives only appear on opposing lanes for each team
-summon minecraft:area_effect_cloud 136 43 179 {CustomName: '{"text":"Generator"}', Tags: ["Point", "FacingNorth", "TeamRed", "Enchant"], CustomNameVisible: 0b, Duration: 2147483647, Rotation: [180.0f, 0.0f]}
-summon minecraft:area_effect_cloud 136 43 179 {CustomName: '{"text":"Generator"}', Tags: ["Point", "FacingNorth", "TeamBlue", "Enchant"], CustomNameVisible: 0b, Duration: 2147483647, Rotation: [180.0f, 0.0f]}
+summon minecraft:area_effect_cloud 136 43 179 {CustomName: '{"text":"Generator"}', Tags: ["Point", "TeamRed", "Enchant"], CustomNameVisible: 0b, Duration: 2147483647, Rotation: [-90.0f, 0.0f]}
+summon minecraft:area_effect_cloud 136 43 179 {CustomName: '{"text":"Generator"}', Tags: ["Point", "TeamBlue", "Enchant"], CustomNameVisible: 0b, Duration: 2147483647, Rotation: [90.0f, -0.0f]}
 
 # Place generators
 execute at @e[type=area_effect_cloud,name="Generator",tag=TeamBlue,tag=FacingWest] run setblock ~ ~ ~ minecraft:structure_block[mode=load]{metadata: "", mirror: "NONE", ignoreEntities: 1b, powered: 0b, seed: 0L, author: "Moesh", rotation: "NONE", posX: -3, mode: "LOAD", posY: -2, sizeX: 7, posZ: -3, integrity: 1.0f, showair: 1b, name: "calamity:blue_resource_point", sizeY: 2, sizeZ: 7, showboundingbox: 1b}
@@ -121,9 +121,6 @@ execute at @e[type=area_effect_cloud,name="Generator"] run setblock ~ ~1 ~ minec
 execute at @e[type=area_effect_cloud,name="Generator"] run fill ~ ~ ~ ~ ~1 ~ minecraft:air
 execute at @e[type=area_effect_cloud,name="Generator"] run setblock ~ ~-1 ~ minecraft:end_portal_frame[facing=east,eye=true]
 
-# Place signs
-execute at @e[type=area_effect_cloud,name="Generator",tag=FacingEast] run setblock ^ ^ ^3 minecraft:oak_sign[rotation=4]
-execute at @e[type=area_effect_cloud,name="Generator",tag=FacingWest] run setblock ^ ^ ^3 minecraft:oak_sign[rotation=12]
 # Update signs
 execute at @e[type=area_effect_cloud,name="Generator"] run data merge block ^ ^ ^3 {Text2: "{\"translate\":\"calamity.generator.sign.ready\"}", Text3: "{\"text\":\"---\"}"}
 execute at @e[type=area_effect_cloud,name="Generator",tag=Arrow] run data merge block ^ ^ ^3 {Text1: "{\"translate\":\"calamity.generator.sign.type\",\"with\":[{\"translate\":\"item.minecraft.arrow\"}]}", Text4: "{\"translate\":\"calamity.generator.sign.perPlayer\",\"with\":[{\"text\":\"16\"}]}"}

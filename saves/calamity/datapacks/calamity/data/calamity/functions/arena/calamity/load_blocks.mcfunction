@@ -201,40 +201,6 @@ summon minecraft:area_effect_cloud 136 57 65 {CustomName: '{"text":"LobbySpawnpo
 summon minecraft:area_effect_cloud 159 45 90 {CustomName: '{"text":"BlueSpawnpoint"}', Tags: ["FacingSouth", "Spawnpoint"], CustomNameVisible: 0b, Duration: 2147483647, Rotation: [0.0f, 0.0f]}
 summon minecraft:area_effect_cloud 113 45 90 {CustomName: '{"text":"RedSpawnpoint"}', Tags: ["FacingSouth", "Spawnpoint"], CustomNameVisible: 0b, Duration: 2147483647, Rotation: [0.0f, 0.0f]}
 
-#---------------------------------------------------------------------------------------------------
-# Purpose: Place lobby tutorial generators
-#---------------------------------------------------------------------------------------------------
-summon minecraft:area_effect_cloud 120 56 63 {CustomName: '{"text":"LobbyPoint"}', Tags: ["Point", "FacingWest", "Scaffolding"], CustomNameVisible: 0b, Duration: 2147483647, Rotation: [-90.0f, -0.0f]}
-summon minecraft:area_effect_cloud 122 56 51 {CustomName: '{"text":"LobbyPoint"}', Tags: ["Point", "FacingWest", "Cobblestone"], CustomNameVisible: 0b, Duration: 2147483647, Rotation: [-90.0f, -0.0f]}
-summon minecraft:area_effect_cloud 130 55 54 {CustomName: '{"text":"LobbyPoint"}', Tags: ["Point", "FacingWest", "Chain"], CustomNameVisible: 0b, Duration: 2147483647, Rotation: [-90.0f, -0.0f]}
-summon minecraft:area_effect_cloud 129 63 45 {CustomName: '{"text":"LobbyPoint"}', Tags: ["Point", "FacingWest", "Arrow"], CustomNameVisible: 0b, Duration: 2147483647, Rotation: [-90.0f, -0.0f]}
-summon minecraft:area_effect_cloud 126 62 35 {CustomName: '{"text":"LobbyPoint"}', Tags: ["Point", "FacingWest", "TNT"], CustomNameVisible: 0b, Duration: 2147483647, Rotation: [-90.0f, -0.0f]}
-# Blue team effect generators only appear on the red lane
-summon minecraft:area_effect_cloud 146 60 27 {CustomName: '{"text":"LobbyPoint"}', Tags: ["Point", "FacingEast", "Regeneration"], CustomNameVisible: 0b, Duration: 2147483647, Rotation: [90.0f, -0.0f]}
-summon minecraft:area_effect_cloud 153 55 41 {CustomName: '{"text":"LobbyPoint"}', Tags: ["Point", "FacingEast", "MiningFatigue"], CustomNameVisible: 0b, Duration: 2147483647, Rotation: [90.0f, -0.0f]}
-summon minecraft:area_effect_cloud 143 51 41 {CustomName: '{"text":"LobbyPoint"}', Tags: ["Point", "FacingEast", "Haste"], CustomNameVisible: 0b, Duration: 2147483647, Rotation: [90.0f, -0.0f]}
-summon minecraft:area_effect_cloud 146 44 27 {CustomName: '{"text":"LobbyPoint"}', Tags: ["Point", "FacingEast", "Speed"], CustomNameVisible: 0b, Duration: 2147483647, Rotation: [90.0f, -0.0f]}
-
-# Red team generators only appear on the red lane
-summon minecraft:area_effect_cloud 152 56 63 {CustomName: '{"text":"LobbyPoint"}', Tags: ["Point", "FacingEast", "Scaffolding"], CustomNameVisible: 0b, Duration: 2147483647, Rotation: [90.0f, -0.0f]}
-summon minecraft:area_effect_cloud 150 56 51 {CustomName: '{"text":"LobbyPoint"}', Tags: ["Point", "FacingEast", "Cobblestone"], CustomNameVisible: 0b, Duration: 2147483647, Rotation: [90.0f, -0.0f]}
-summon minecraft:area_effect_cloud 142 55 54 {CustomName: '{"text":"LobbyPoint"}', Tags: ["Point", "FacingEast", "Chain"], CustomNameVisible: 0b, Duration: 2147483647, Rotation: [90.0f, -0.0f]}
-summon minecraft:area_effect_cloud 143 63 45 {CustomName: '{"text":"LobbyPoint"}', Tags: ["Point", "FacingEast", "Arrow"], CustomNameVisible: 0b, Duration: 2147483647, Rotation: [90.0f, -0.0f]}
-summon minecraft:area_effect_cloud 146 62 35 {CustomName: '{"text":"LobbyPoint"}', Tags: ["Point", "FacingEast", "TNT"], CustomNameVisible: 0b, Duration: 2147483647, Rotation: [90.0f, -0.0f]}
-# Red team effect generators only appear on the blue lane
-summon minecraft:area_effect_cloud 126 60 27 {CustomName: '{"text":"LobbyPoint"}', Tags: ["Point", "FacingWest", "Regeneration"], CustomNameVisible: 0b, Duration: 2147483647, Rotation: [-90.0f, -0.0f]}
-summon minecraft:area_effect_cloud 119 55 41 {CustomName: '{"text":"LobbyPoint"}', Tags: ["Point", "FacingWest", "MiningFatigue"], CustomNameVisible: 0b, Duration: 2147483647, Rotation: [-90.0f, -0.0f]}
-summon minecraft:area_effect_cloud 129 51 41 {CustomName: '{"text":"LobbyPoint"}', Tags: ["Point", "FacingWest", "Haste"], CustomNameVisible: 0b, Duration: 2147483647, Rotation: [-90.0f, -0.0f]}
-summon minecraft:area_effect_cloud 126 44 27 {CustomName: '{"text":"LobbyPoint"}', Tags: ["Point", "FacingWest", "Speed"], CustomNameVisible: 0b, Duration: 2147483647, Rotation: [-90.0f, -0.0f]}
-# This generators only appear on opposing lanes for each team
-summon minecraft:area_effect_cloud 147 50 69 {CustomName: '{"text":"LobbyPoint"}', Tags: ["Point", "FacingEast", "Enchant"], CustomNameVisible: 0b, Duration: 2147483647, Rotation: [90.0f, -0.0f]}
-summon minecraft:area_effect_cloud 125 50 69 {CustomName: '{"text":"LobbyPoint"}', Tags: ["Point", "FacingWest", "Enchant"], CustomNameVisible: 0b, Duration: 2147483647, Rotation: [-90.0f, -0.0f]}
-
-# Place signs
-execute at @e[type=area_effect_cloud,name="LobbyPoint",tag=FacingEast] run setblock ^ ^ ^1 minecraft:oak_sign[rotation=12]
-execute at @e[type=area_effect_cloud,name="LobbyPoint",tag=FacingWest] run setblock ^ ^ ^1 minecraft:oak_sign[rotation=4]
-# Rotate those eyes
-execute at @e[type=area_effect_cloud,name="LobbyPoint"] run setblock ~ ~-1 ~ minecraft:end_portal_frame[facing=east,eye=true]
 # Update signs
 execute at @e[type=area_effect_cloud,name="LobbyPoint"] run data merge block ^ ^ ^1 {Text2: "{\"translate\":\"calamity.generator.sign.ready\"}", Text3: "{\"text\":\"---\"}"}
 execute at @e[type=area_effect_cloud,name="LobbyPoint",tag=Arrow] run data merge block ^ ^ ^1 {Text1: "{\"translate\":\"calamity.generator.sign.type\",\"with\":[{\"translate\":\"item.minecraft.arrow\"}]}", Text4: "{\"translate\":\"calamity.generator.sign.perPlayer\",\"with\":[{\"text\":\"16\"}]}"}
