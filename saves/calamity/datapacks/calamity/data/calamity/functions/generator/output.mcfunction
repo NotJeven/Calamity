@@ -8,7 +8,7 @@
 # Update generator state to resetting
 tag @s add Resetting
 tag @s remove Charging
-scoreboard players operation @s GeneratorTimer = PointResetTime mapRules
+scoreboard players operation @s GeneratorTimer = GeneratorResetTime mapRules
 
 #---------------------------------------------------------------------------------------------------
 # Detect players who are standing on a generator
@@ -38,10 +38,6 @@ execute if entity @a[tag=GiveItem] run function calamity:generator/output/item
 execute if entity @a[tag=Enchant] run function calamity:generator/output/enchant
 
 # Update signs
-execute as @s run data merge block ^ ^ ^3 {Text2: "{\"translate\":\"calamity.generator.sign.activated\"}"}
+execute as @s run data merge block ^ ^ ^3 {Text3: "{\"translate\":\"calamity.generator.sign.activated\"}"}
 # Make sure the handler doesn't call this function on the next cycle, unless it is needed
 tag @s remove Output
-# Reset tags
-tag @a[tag=GiveMessage] remove GiveMessage
-
-

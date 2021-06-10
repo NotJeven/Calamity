@@ -57,22 +57,21 @@ scoreboard players enable @a[tag=Playing] gg
 effect give @a minecraft:slow_falling 1 0 true
 effect clear @a minecraft:slow_falling
 
-# Teleport players to starting location
-execute at @e[type=minecraft:area_effect_cloud,name="BlueSpawnpoint"] run teleport @a[team=blue] ~ ~ ~ 0 0
-execute at @e[type=minecraft:area_effect_cloud,name="BlueSpawnpoint"] run spawnpoint @a[team=blue] ~ ~ ~
-execute at @e[type=minecraft:area_effect_cloud,name="RedSpawnpoint"] run teleport @a[team=red] ~ ~ ~ 0 0
-execute at @e[type=minecraft:area_effect_cloud,name="RedSpawnpoint"] run spawnpoint @a[team=red] ~ ~ ~
+function calamity:player/set_match_spawnpoint
 
 # Reset the match timer
 scoreboard players set MatchTimeInTicks gameVariable 0
 
-# Reset players item selection and give players the starting item selection
-scoreboard players set @a selectedItem -1
-scoreboard players set @a[tag=Playing] giveSpawnItems 1
+# Give starting items
+scoreboard players set #arenaAction gameVariable 8
+execute as @a[tag=Playing] run function calamity:arena/handler
+
+# Arena-specific actions (like removing blocks or entities)
+scoreboard players set #arenaAction gameVariable 5
+function calamity:arena/handler
 
 # Send tellraw BEFORE changing any game modes!
 tellraw @a {"translate":"system.message","color":"green","with":[{"translate":"calamity.seekGlory"}]}
-tellraw @a {"translate":"calamity.select.respawnItem","color":"gray","with":[{"translate":"calamity.select.respawnItem","italic": true}]}
 playsound minecraft:event.raid.horn master @a 136 150 89 999999
 playsound calamity:calamity.announcer.match.started master @a 136 150 89 500
 
