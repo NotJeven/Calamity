@@ -71,6 +71,24 @@
     execute if score #arenaAction gameVariable matches 9 if score #currentArena gameVariable matches 2 run give @a[tag=Playing,scores={timeSinceDeath=0}] bow{Unbreakable:1b,Enchantments:[{id:"minecraft:vanishing_curse",lvl:1s}],AttributeModifiers:[{AttributeName:"generic.armor",Name:"generic.armor",Amount:6,Operation:0,UUID:[I;-2068228233,-322420677,-1309210629,532578535],Slot:"mainhand"}]} 1
     execute if score #arenaAction gameVariable matches 9 if score #currentArena gameVariable matches 2 run give @a[tag=Playing,scores={timeSinceDeath=0}] minecraft:arrow 16
 
+#> 9 jevenland
+    # Load a new arena
+    execute if score #arenaAction gameVariable matches 0 if score #currentArena gameVariable matches 9 run function #calamity:load_arena_jeven
+    # Erase the arenas
+    execute if score #arenaAction gameVariable matches 1 if score #currentArena gameVariable matches 9 run function calamity:arena/jeven/erase
+    # Additional actions
+    execute if score #arenaAction gameVariable matches 2 if score #currentArena gameVariable matches 9 run function calamity:arena/jeven/actions
+    # Count the ore
+    execute if score #arenaAction gameVariable matches 3 if score #currentArena gameVariable matches 9 run execute store result score OreLeft gameVariable run fill 161 2 147 109 19 134 minecraft:petrified_oak_slab[type=double] replace minecraft:iron_ore
+    execute if score #arenaAction gameVariable matches 3 if score #currentArena gameVariable matches 9 run fill 161 2 147 109 19 134 minecraft:iron_ore replace minecraft:petrified_oak_slab
+    # Send welcome message
+    execute if score #arenaAction gameVariable matches 4 if score #currentArena gameVariable matches 9 as @a run function calamity:arena/jeven/send_welcome_message
+    # 5 - Start match
+    # 8 Give spawn items
+    execute if score #arenaAction gameVariable matches 9 if score #currentArena gameVariable matches 9 run give @a[tag=Playing,scores={timeSinceDeath=0}] wooden_axe{RepairCost:666,Damage:45,Enchantments:[{id:"minecraft:vanishing_curse",lvl:1s}],AttributeModifiers:[{AttributeName:"generic.attack_damage",Name:"generic.attack_damage",Amount:4,Operation:0,UUID:[I;-31386206,-663338499,-1677180052,-261106179],Slot:"mainhand"},{AttributeName:"generic.attack_speed",Name:"generic.attack_speed",Amount:1,Operation:0,UUID:[I;1174657704,-1982709368,-1633494077,363317273],Slot:"mainhand"}]} 1
+    # 9 Give spawn items
+    execute if score #arenaAction gameVariable matches 9 if score #currentArena gameVariable matches 9 run give @a[tag=Playing,scores={timeSinceDeath=0}] wooden_axe{RepairCost:666,Damage:45,Enchantments:[{id:"minecraft:vanishing_curse",lvl:1s}],AttributeModifiers:[{AttributeName:"generic.attack_damage",Name:"generic.attack_damage",Amount:4,Operation:0,UUID:[I;-31386206,-663338499,-1677180052,-261106179],Slot:"mainhand"},{AttributeName:"generic.attack_speed",Name:"generic.attack_speed",Amount:1,Operation:0,UUID:[I;1174657704,-1982709368,-1633494077,363317273],Slot:"mainhand"}]} 1
+
 # Always set score to zero. Players never have access to this variable, so we can take advantage of
 #   how the behavior will work.
 scoreboard players set #arenaAction gameVariable 0
