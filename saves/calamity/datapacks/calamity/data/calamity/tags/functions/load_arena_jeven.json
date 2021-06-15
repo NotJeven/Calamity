@@ -1,0 +1,8 @@
+{
+    "values": [
+        "calamity:arena/jeven/load_blocks",
+        "calamity:player/update_displays",
+        "calamity:points/setup_bossbar",
+        "calamity:arena/jeven/set_arena_rules"
+    ]
+}
