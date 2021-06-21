@@ -88,7 +88,7 @@ summon minecraft:area_effect_cloud 117 34 90 {CustomName: '{"text":"RedSpawnpoin
 
 # Blue team on the blue lane
 summon minecraft:area_effect_cloud 149 28 104 {CustomName: '{"text":"Generator"}', Tags: ["Point", "FacingWest", "TeamBlue", "Resource", "Scaffolding"], CustomNameVisible: 0b, Duration: 2147483647, Rotation: [90.0f, -0.0f]}
-summon minecraft:area_effect_cloud 161 28 104 {CustomName: '{"text":"Generator"}', Tags: ["Point", "FacingWest", "TeamBlue", "Resource", "Chain"], CustomNameVisible: 0b, Duration: 2147483647, Rotation: [90.0f, -0.0f]}
+summon minecraft:area_effect_cloud 161 28 104 {CustomName: '{"text":"Generator"}', Tags: ["Point", "FacingWest", "TeamBlue", "Resource", "GoldIngot"], CustomNameVisible: 0b, Duration: 2147483647, Rotation: [90.0f, -0.0f]}
 summon minecraft:area_effect_cloud 161 25 173 {CustomName: '{"text":"Generator"}', Tags: ["Point", "FacingWest", "TeamBlue", "Resource", "Arrow"], CustomNameVisible: 0b, Duration: 2147483647, Rotation: [90.0f, -0.0f]}
 summon minecraft:area_effect_cloud 161 29 151 {CustomName: '{"text":"Generator"}', Tags: ["Point", "FacingWest", "TeamBlue", "Resource", "TNT"], CustomNameVisible: 0b, Duration: 2147483647, Rotation: [90.0f, -0.0f]}
 summon minecraft:area_effect_cloud 150 8 158 {CustomName: '{"text":"Generator"}', Tags: ["Point", "FacingWest", "TeamBlue", "Effect", "Regeneration"], CustomNameVisible: 0b, Duration: 2147483647, Rotation: [90.0f, -0.0f]}
@@ -99,7 +99,7 @@ summon minecraft:area_effect_cloud 110 38 134 {CustomName: '{"text":"Generator"}
 
 # Red team on the red lane
 summon minecraft:area_effect_cloud 123 28 104 {CustomName: '{"text":"Generator"}', Tags: ["Point", "FacingEast", "TeamRed", "Resource", "Scaffolding"], CustomNameVisible: 0b, Duration: 2147483647, Rotation: [-90.0f, -0.0f]}
-summon minecraft:area_effect_cloud 111 28 104 {CustomName: '{"text":"Generator"}', Tags: ["Point", "FacingEast", "TeamRed", "Resource", "Chain"], CustomNameVisible: 0b, Duration: 2147483647, Rotation: [-90.0f, -0.0f]}
+summon minecraft:area_effect_cloud 111 28 104 {CustomName: '{"text":"Generator"}', Tags: ["Point", "FacingEast", "TeamRed", "Resource", "GoldIngot"], CustomNameVisible: 0b, Duration: 2147483647, Rotation: [-90.0f, -0.0f]}
 summon minecraft:area_effect_cloud 111 25 173 {CustomName: '{"text":"Generator"}', Tags: ["Point", "FacingEast", "TeamRed", "Resource", "Arrow"], CustomNameVisible: 0b, Duration: 2147483647, Rotation: [-90.0f, -0.0f]}
 summon minecraft:area_effect_cloud 111 29 151 {CustomName: '{"text":"Generator"}', Tags: ["Point", "FacingEast", "TeamRed", "Resource", "TNT"], CustomNameVisible: 0b, Duration: 2147483647, Rotation: [-90.0f, -0.0f]}
 summon minecraft:area_effect_cloud 122 8 158 {CustomName: '{"text":"Generator"}', Tags: ["Point", "FacingEast", "TeamRed", "Effect", "Regeneration"], CustomNameVisible: 0b, Duration: 2147483647, Rotation: [-90.0f, -0.0f]}
