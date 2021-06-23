@@ -19,11 +19,11 @@
     setblock 136 56 67 minecraft:structure_block[mode=load]{metadata: "", mirror: "NONE", ignoreEntities: 1b, powered: 0b, seed: 0L, author: "Moesh", rotation: "NONE", posX: -3, mode: "LOAD", posY: 0, sizeX: 7, posZ: 1, integrity: 1.0f, showair: 0b, name: "calamity:jeven/lobby", sizeY: 2, sizeZ: 4, showboundingbox: 1b}
 # Activate the structure blocks!
     # Left side
-    setblock 141 0 76 minecraft:redstone_block
+    setblock 141 0 75 minecraft:redstone_block
     setblock 141 0 100 minecraft:redstone_block
     setblock 141 0 148 minecraft:redstone_block
     # Right side
-    setblock 131 0 76 minecraft:redstone_block
+    setblock 131 0 75 minecraft:redstone_block
     setblock 131 0 100 minecraft:redstone_block
     setblock 131 0 148 minecraft:redstone_block
     # Crosslane
@@ -42,7 +42,7 @@
 
 # We treat this level like a giant U-shape, starting on the left side. 
 # Save/load calamity1, calamity2
-fill 141 0 86 141 0 76 minecraft:air
+fill 141 0 86 141 0 75 minecraft:air
 # Save/load calamity3, calamity4
 fill 141 0 100 141 0 101 minecraft:air
 # Save calamity5, calamity6
@@ -54,7 +54,7 @@ fill 131 0 148 131 0 149 minecraft:air
 # Load calamity3, calamity4
 fill 131 0 100 131 0 101 minecraft:air
 # Load calamity1, calamity2
-fill 131 0 86 131 0 76 minecraft:air
+fill 131 0 86 131 0 75 minecraft:air
 # crosslane
 fill 131 0 178 131 0 179 minecraft:air
 # Lobby
