@@ -6,11 +6,11 @@
 
 # Place structure blocks
     # Left side
-    setblock 141 0 87 minecraft:structure_block[mode=load]{metadata: "", mirror: "NONE", ignoreEntities: 1b, powered: 0b, seed: 0L, author: "Moesh", rotation: "NONE", posX: 1, mode: "LOAD", posY: 0, sizeX: 33, posZ: 0, integrity: 1.0f, showair: 0b, name: "calamity:jeven/arena1", sizeY: 48, sizeZ: 12, showboundingbox: 1b}
+    setblock 141 0 76 minecraft:structure_block[mode=load]{metadata: "", mirror: "NONE", ignoreEntities: 1b, powered: 0b, seed: 0L, author: "Moesh", rotation: "NONE", posX: 1, mode: "LOAD", posY: 0, sizeX: 33, posZ: 0, integrity: 1.0f, showair: 0b, name: "calamity:jeven/arena1", sizeY: 48, sizeZ: 25, showboundingbox: 1b}
     setblock 141 0 101 minecraft:structure_block[mode=load]{metadata: "", mirror: "NONE", ignoreEntities: 1b, powered: 0b, seed: 0L, author: "Moesh", rotation: "NONE", posX: 1, mode: "LOAD", posY: 0, sizeX: 33, posZ: 0, integrity: 1.0f, showair: 0b, name: "calamity:jeven/arena3", sizeY: 48, sizeZ: 48, showboundingbox: 1b}
     setblock 141 0 149 minecraft:structure_block[mode=load]{metadata: "", mirror: "NONE", ignoreEntities: 1b, powered: 0b, seed: 0L, author: "Moesh", rotation: "NONE", posX: 1, mode: "LOAD", posY: 0, sizeX: 33, posZ: 0, integrity: 1.0f, showair: 0b, name: "calamity:jeven/arena5", sizeY: 48, sizeZ: 48, showboundingbox: 1b}
     # Right side
-    setblock 131 0 87 minecraft:structure_block[mode=load]{metadata: "", mirror: "LEFT_RIGHT", ignoreEntities: 1b, powered: 0b, seed: 0L, author: "Moesh", rotation: "CLOCKWISE_180", posX: -1, mode: "LOAD", posY: 0, sizeX: 33, posZ: 0, integrity: 1.0f, showair: 0b, name: "calamity:jeven/arena1", sizeY: 48, sizeZ: 12, showboundingbox: 1b}
+    setblock 131 0 76 minecraft:structure_block[mode=load]{metadata: "", mirror: "LEFT_RIGHT", ignoreEntities: 1b, powered: 0b, seed: 0L, author: "Moesh", rotation: "CLOCKWISE_180", posX: -1, mode: "LOAD", posY: 0, sizeX: 33, posZ: 0, integrity: 1.0f, showair: 0b, name: "calamity:jeven/arena1", sizeY: 48, sizeZ: 25, showboundingbox: 1b}
     setblock 131 0 101 minecraft:structure_block[mode=load]{metadata: "", mirror: "LEFT_RIGHT", ignoreEntities: 1b, powered: 0b, seed: 0L, author: "Moesh", rotation: "CLOCKWISE_180", posX: -1, mode: "LOAD", posY: 0, sizeX: 33, posZ: 0, integrity: 1.0f, showair: 0b, name: "calamity:jeven/arena3", sizeY: 48, sizeZ: 48, showboundingbox: 1b}
     setblock 131 0 149 minecraft:structure_block[mode=load]{metadata: "", mirror: "LEFT_RIGHT", ignoreEntities: 1b, powered: 0b, seed: 0L, author: "Moesh", rotation: "CLOCKWISE_180", posX: -1, mode: "LOAD", posY: 0, sizeX: 33, posZ: 0, integrity: 1.0f, showair: 0b, name: "calamity:jeven/arena5", sizeY: 48, sizeZ: 48, showboundingbox: 1b}
     # Crosslane
@@ -19,11 +19,11 @@
     setblock 136 56 67 minecraft:structure_block[mode=load]{metadata: "", mirror: "NONE", ignoreEntities: 1b, powered: 0b, seed: 0L, author: "Moesh", rotation: "NONE", posX: -3, mode: "LOAD", posY: 0, sizeX: 7, posZ: 1, integrity: 1.0f, showair: 0b, name: "calamity:jeven/lobby", sizeY: 2, sizeZ: 4, showboundingbox: 1b}
 # Activate the structure blocks!
     # Left side
-    setblock 141 0 86 minecraft:redstone_block
+    setblock 141 0 76 minecraft:redstone_block
     setblock 141 0 100 minecraft:redstone_block
     setblock 141 0 148 minecraft:redstone_block
     # Right side
-    setblock 131 0 86 minecraft:redstone_block
+    setblock 131 0 76 minecraft:redstone_block
     setblock 131 0 100 minecraft:redstone_block
     setblock 131 0 148 minecraft:redstone_block
     # Crosslane
@@ -32,8 +32,8 @@
     setblock 136 57 67 minecraft:redstone_block 
 
 # Data layers
-    fill 145 255 191 167 255 87 minecraft:barrier
-    fill 127 255 191 105 255 87 minecraft:barrier
+    fill 145 255 191 167 255 76 minecraft:barrier
+    fill 127 255 191 105 255 76 minecraft:barrier
     fill 145 255 182 127 255 191 minecraft:barrier
 
 #>--------------------------------------------------------------------------------------------------
@@ -42,7 +42,7 @@
 
 # We treat this level like a giant U-shape, starting on the left side. 
 # Save/load calamity1, calamity2
-fill 141 0 86 141 0 87 minecraft:air
+fill 141 0 86 141 0 76 minecraft:air
 # Save/load calamity3, calamity4
 fill 141 0 100 141 0 101 minecraft:air
 # Save calamity5, calamity6
@@ -54,7 +54,7 @@ fill 131 0 148 131 0 149 minecraft:air
 # Load calamity3, calamity4
 fill 131 0 100 131 0 101 minecraft:air
 # Load calamity1, calamity2
-fill 131 0 86 131 0 87 minecraft:air
+fill 131 0 86 131 0 76 minecraft:air
 # crosslane
 fill 131 0 178 131 0 179 minecraft:air
 # Lobby
@@ -91,7 +91,7 @@ summon minecraft:area_effect_cloud 149 28 104 {CustomName: '{"text":"Generator"}
 summon minecraft:area_effect_cloud 161 28 104 {CustomName: '{"text":"Generator"}', Tags: ["Point", "FacingWest", "TeamBlue", "Resource", "GoldIngot"], CustomNameVisible: 0b, Duration: 2147483647, Rotation: [90.0f, -0.0f]}
 summon minecraft:area_effect_cloud 161 25 173 {CustomName: '{"text":"Generator"}', Tags: ["Point", "FacingWest", "TeamBlue", "Resource", "Arrow"], CustomNameVisible: 0b, Duration: 2147483647, Rotation: [90.0f, -0.0f]}
 summon minecraft:area_effect_cloud 161 29 151 {CustomName: '{"text":"Generator"}', Tags: ["Point", "FacingWest", "TeamBlue", "Resource", "TNT"], CustomNameVisible: 0b, Duration: 2147483647, Rotation: [90.0f, -0.0f]}
-summon minecraft:area_effect_cloud 150 8 158 {CustomName: '{"text":"Generator"}', Tags: ["Point", "FacingWest", "TeamBlue", "Effect", "Regeneration"], CustomNameVisible: 0b, Duration: 2147483647, Rotation: [90.0f, -0.0f]}
+summon minecraft:area_effect_cloud 157 8 158 {CustomName: '{"text":"Generator"}', Tags: ["Point", "FacingWest", "TeamBlue", "Effect", "Regeneration"], CustomNameVisible: 0b, Duration: 2147483647, Rotation: [90.0f, -0.0f]}
 # Blue team on the red lane
 summon minecraft:area_effect_cloud 110 38 186 {CustomName: '{"text":"Generator"}', Tags: ["Point", "FacingEast", "TeamBlue", "Effect", "Haste"], CustomNameVisible: 0b, Duration: 2147483647, Rotation: [-90.0f, 0.0f]}
 summon minecraft:area_effect_cloud 110 38 134 {CustomName: '{"text":"Generator"}', Tags: ["Point", "FacingEast", "TeamBlue", "Enchant"], CustomNameVisible: 0b, Duration: 2147483647, Rotation: [-90.0f, -0.0f]}
