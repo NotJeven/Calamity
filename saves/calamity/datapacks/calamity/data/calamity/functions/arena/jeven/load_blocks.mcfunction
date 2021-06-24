@@ -32,9 +32,9 @@
     setblock 136 57 67 minecraft:redstone_block 
 
 # Data layers
-    fill 145 255 191 167 255 76 minecraft:barrier
-    fill 127 255 191 105 255 76 minecraft:barrier
-    fill 145 255 182 127 255 191 minecraft:barrier
+    fill 144 255 191 160 255 76 minecraft:barrier
+    fill 128 255 191 112 255 76 minecraft:barrier
+    fill 144 255 182 128 255 191 minecraft:barrier
 
 #>--------------------------------------------------------------------------------------------------
 #> Purpose: Erase structure and redstone blocks

@@ -22,9 +22,9 @@ fill 130 0 180 98 47 199 minecraft:air
 fill 141 0 181 131 47 199 minecraft:air
 
 # Data layers
-fill 145 255 191 167 255 76 minecraft:air
-fill 127 255 191 105 255 76 minecraft:air
-fill 145 255 182 127 255 191 minecraft:air
+fill 144 255 191 160 255 76 minecraft:air
+fill 128 255 191 112 255 76 minecraft:air
+fill 144 255 182 128 255 191 minecraft:air
 
 # lobby
 fill 133 56 68 139 58 71 minecraft:air
