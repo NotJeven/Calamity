@@ -79,8 +79,8 @@
     # Additional actions
     execute if score #arenaAction gameVariable matches 2 if score #currentArena gameVariable matches 9 run function calamity:arena/jeven/actions
     # Count the ore
-    execute if score #arenaAction gameVariable matches 3 if score #currentArena gameVariable matches 9 run execute store result score OreLeft gameVariable run fill 161 2 147 109 19 134 minecraft:petrified_oak_slab[type=double] replace minecraft:iron_ore
-    execute if score #arenaAction gameVariable matches 3 if score #currentArena gameVariable matches 9 run fill 161 2 147 109 19 134 minecraft:iron_ore replace minecraft:petrified_oak_slab
+    execute if score #arenaAction gameVariable matches 3 if score #currentArena gameVariable matches 9 run execute store result score OreLeft gameVariable run fill 116 4 134 156 18 148 minecraft:petrified_oak_slab[type=double] replace minecraft:iron_ore
+    execute if score #arenaAction gameVariable matches 3 if score #currentArena gameVariable matches 9 run fill 116 4 134 156 18 148 minecraft:iron_ore replace minecraft:petrified_oak_slab
     # Send welcome message
     execute if score #arenaAction gameVariable matches 4 if score #currentArena gameVariable matches 9 as @a run function calamity:arena/jeven/send_welcome_message
     # 5 - Start match
